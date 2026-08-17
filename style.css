@@ -1,4 +1,4 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -99,7 +99,6 @@ main {
     border: 4px solid #5fd3bc;
     margin-bottom: 20px;
 }
-
 .btn {
     display: inline-block;
     padding: 12px 22px;
@@ -108,10 +107,12 @@ main {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: #f2c14e;
+    transform: translateY(-2px);
 }
 
 .secondary-btn {
@@ -124,7 +125,6 @@ main {
     background: #5fd3bc;
     color: #0f1115;
 }
-
 .content-section {
     background: #171a21;
     border: 1px solid #2a2f3a;
@@ -160,6 +160,7 @@ main {
     border-radius: 10px;
     border: 1px solid #2a2f3a;
     text-align: center;
+    transition: 0.3s;
 }
 
 .skill:hover {
@@ -229,10 +230,12 @@ tr:hover {
     border: 1px solid #2a2f3a;
     border-radius: 10px;
     overflow: hidden;
+    transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: #5fd3bc;
 }
 
 .project-card img {
@@ -282,14 +285,42 @@ blockquote {
 
 .contact-section {
     max-width: 700px;
-    margin: auto;
-    background: #171a21;
-    padding: 30px;
+    margin: 40px auto;
+    background: linear-gradient(145deg, #202735, #171a21);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #3a4354;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.contact-section h2 {
+    color: #64e6c9;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-section > p {
+    color: #b8c0cc;
+    text-align: center;
+}
+
+
+.contact-info {
+    background: #252c39;
+    padding: 20px;
     border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #64e6c9;
 }
 
 .contact-info p {
     margin-bottom: 10px;
+    color: #d8dde5;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
 }
 
 form {
@@ -299,21 +330,31 @@ form {
 
 label {
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    color: #64e6c9;
+    font-weight: bold;
 }
 
 input,
 textarea {
-    padding: 12px;
-    background: #0f1115;
-    color: #e7e9ed;
-    border: 1px solid #2a2f3a;
-    border-radius: 5px;
+    padding: 13px;
+    background: #10131a;
+    color: #ffffff;
+    border: 1px solid #3a4354;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #7f8999;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #5fd3bc;
+    border-color: #64e6c9;
+    box-shadow: 0 0 8px rgba(100, 230, 201, 0.25);
     outline: none;
 }
 
@@ -322,26 +363,46 @@ textarea {
     resize: vertical;
 }
 
+.contact-section .btn {
+    margin-top: 20px;
+    background: #64e6c9;
+    color: #10131a;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section .btn:hover {
+    background: #f2c14e;
+    color: #10131a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(242, 193, 78, 0.25);
+}
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 12px;
+    margin-top: 25px;
     flex-wrap: wrap;
 }
 
 .social-links a {
-    color: #5fd3bc;
+    color: #64e6c9;
     text-decoration: none;
-    padding: 10px 15px;
-    border: 1px solid #2a2f3a;
-    border-radius: 5px;
+    padding: 10px 16px;
+    border: 1px solid #3a4354;
+    border-radius: 8px;
+    background: #202735;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
-    background: #5fd3bc;
-    color: #0f1115;
+    background: #64e6c9;
+    color: #10131a;
+    border-color: #64e6c9;
+    transform: translateY(-3px);
 }
+
 
 .notice-box {
     background: #1d212b;
@@ -364,6 +425,7 @@ textarea {
     border-radius: 8px;
 }
 
+
 pre {
     background: #0f1115;
     padding: 15px;
@@ -375,6 +437,7 @@ code {
     color: #f2c14e;
 }
 
+
 footer {
     text-align: center;
     padding: 20px;
@@ -383,6 +446,7 @@ footer {
     color: #9aa3b2;
     margin-top: 40px;
 }
+
 
 @media (max-width: 768px) {
 
@@ -411,7 +475,12 @@ footer {
     }
 
     .contact-section {
-        padding: 20px;
+        padding: 25px;
+        margin: 30px 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
     }
 
     .timeline {
@@ -437,5 +506,32 @@ footer {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .contact-section {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .contact-section h2 {
+        font-size: 25px;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        text-align: center;
+        width: 100%;
     }
 }
