@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Blog</h1>
+    <p>Notes from learning to build for the web.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitereport.html">Site Report</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="content-section blog-section">
+    <h2>Why My First Layouts Kept Breaking on Mobile</h2>
+
+    <img class="blog-cover" src="river.jpg" alt="Placeholder cover image of code on a screen">
+
+    <p>
+        When I started this module, every page I built looked fine on my
+        laptop and fell apart the moment I resized the browser. Text
+        overflowed its box, my navigation wrapped onto three lines, and
+        images stretched past their containers. It took a while to realise
+        this wasn't bad luck - it was a missing mental model.
+    </p>
+
+    <h3>The fix wasn't more CSS, it was different CSS</h3>
+    <p>
+        My first instinct was to patch each broken layout with a fixed
+        pixel width. That just moved the problem to the next screen size.
+        Switching to relative units - percentages, <code>rem</code>, and
+        CSS Grid's <code>fr</code> unit - meant the layout could flex
+        instead of snap.
+    </p>
+
+    <figure>
+        <img src="city.jpg" alt="Placeholder illustration of a layout at different screen widths">
+        <figcaption>Same markup, different breakpoints - nothing hard-coded in pixels.</figcaption>
+    </figure>
+
+    <h3>Media queries as a last step, not a first one</h3>
+    <p>
+        The biggest shift for me was designing mobile-first: build the
+        single-column version first, then use a <code>min-width</code>
+        media query to add structure - like the multi-column skills grid -
+        as the viewport grows.
+    </p>
+
+    <blockquote>"Make it work, then make it work everywhere." - the rule I now keep coming back to.</blockquote>
+
+    <h3>What I'd tell myself on day one</h3>
+    <p>
+        Resize the browser constantly while you build, not after. Every
+        layout bug is easier to catch at the moment you introduce it than
+        three sections later when you can't remember which rule caused it.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Aditya Yadav. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
