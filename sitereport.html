@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Report - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Site Report</h1>
+    <p>A reflective log of building this portfolio for CSY1063.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitereport.html" class="active">Site Report</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="content-section">
+
+    <div class="notice-box">
+        ⚠️ Placeholder text below - written as an example so you can see the
+        shape and tone expected (informal, honest, specific). Replace it with
+        your own real account before submitting; a marker (and a viva) can
+        tell a generic reflection from a genuine one.
+    </div>
+
+    <h2>Starting Out</h2>
+    <p>
+        Week one was mostly confusion. I understood what a tag was, but not
+        why the browser rendered a <code>&lt;div&gt;</code> full-width by
+        default, or why a CSS selector wasn't matching the element I wanted.
+        My first version of the home page was a plain block of unstyled text -
+        getting from that to something with real structure took longer than
+        I expected, mostly because I kept nudging things with
+        <code>margin</code> instead of learning the box model properly.
+    </p>
+
+    <h2>Design Decisions</h2>
+    <p>
+        I went with a dark theme - a near-black background
+        (<code>#0f1115</code>) with a mint accent (<code>#5fd3bc</code>) for
+        headings, links, and buttons, and amber (<code>#f2c14e</code>) as a
+        secondary highlight for things like code snippets and hover states.
+        It reads well for long stretches of text like this report, and it
+        feels closer to a developer's own tool than a plain white page.
+    </p>
+    <p>
+        Layout-wise I kept things simple and consistent: a centred header,
+        a sticky nav bar, and a single-column main area built from repeated
+        <code>.content-section</code> cards. The skills page breaks that
+        pattern slightly with its card grid, and the projects page uses its
+        own grid again - different content, different shape, same underlying
+        system.
+    </p>
+
+    <h2>Ups and Downs</h2>
+    <p>
+        The contact form gave me the most trouble. My first attempt used
+        <code>action="mailto:..."</code> without <code>enctype="text/plain"</code>,
+        and the fields came through as one unreadable line in the email body.
+        Adding the correct <code>enctype</code> fixed it, but it took a fair
+        bit of searching to understand why. I also caught a typo in my own
+        email address on the contact page while proofreading - a good
+        reminder to actually test the form myself rather than assume it works.
+    </p>
+    <p>
+        The win was getting the project card grid to reflow properly on
+        mobile using <code>grid-template-columns: repeat(auto-fit, minmax(...))</code>
+        instead of a fixed column count - one line of CSS replaced three
+        separate media query overrides I'd written before that.
+    </p>
+
+    <h2>Validation</h2>
+    <p>
+        Each page was run through the W3C HTML validator individually, since
+        each is a separate file. The stylesheet was validated once, since all
+        six pages share the same <code>style.css</code>. Save each validator
+        screenshot into an <code>images/</code> folder next to these HTML
+        files, using the filenames below (or update the <code>src</code> to
+        match whatever you name them).
+    </p>
+
+    <h3>HTML - index.html</h3>
+    <div class="validation-shot">
+        <img src="index.png" alt="W3C HTML validator result for index.html - replace with your own screenshot">
+    </div>
+
+    <h3>HTML - project.html</h3>
+    <div class="validation-shot">
+        <img src="project.png" alt="W3C HTML validator result for project.html - replace with your own screenshot">
+    </div>
+
+    <h3>HTML - skills.html</h3>
+    <div class="validation-shot">
+        <img src="skills.png" alt="W3C HTML validator result for skills.html - replace with your own screenshot">
+    </div>
+
+    <h3>HTML - blog.html</h3>
+    <div class="validation-shot">
+        <img src="blog.png" alt="W3C HTML validator result for blog.html - replace with your own screenshot">
+    </div>
+
+    <h3>HTML - contact.html</h3>
+    <div class="validation-shot">
+        <img src="contact.png" alt="W3C HTML validator result for contact.html - replace with your own screenshot">
+    </div>
+
+    <h3>HTML - sitereport.html</h3>
+    <div class="validation-shot">
+        <img src="sitereport.png" alt="W3C HTML validator result for sitereport.html - replace with your own screenshot">
+    </div>
+
+    <h3>CSS - style.css</h3>
+    <div class="validation-shot">
+        <img src="css.png" alt="W3C CSS validator result for style.css - replace with your own screenshot">
+    </div>
+
+    <p>Validate at <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener">validator.w3.org/nu</a>
+        (paste each page's live URL or upload the file) and
+        <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">jigsaw.w3.org/css-validator</a>
+        (upload <code>style.css</code> once).</p>
+
+    <h2>Video Demonstration</h2>
+    <p>Video walkthrough (max 3 minutes), covering every page, design decisions, and the CSS concepts used:</p>
+    <p><a href="https://www.youtube.com/watch?v=REPLACE_WITH_YOUR_VIDEO_ID" target="_blank" rel="noopener">https://www.youtube.com/watch?v=REPLACE_WITH_YOUR_VIDEO_ID</a></p>
+
+    <h2>References</h2>
+    <p>List anything here (Harvard style) for any code or ideas you used that weren't your own, noting exactly which lines and why.</p>
+    <blockquote>Example: MDN Web Docs (2026) <em>CSS Grid Layout</em>. Available at: developer.mozilla.org [Accessed: date].</blockquote>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Aditya Yadav. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
